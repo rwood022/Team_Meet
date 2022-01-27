@@ -1,6 +1,6 @@
 const inquirer = require ("inquirer");
 const fs = require("fs");
-// create the team
+//team template given to class by instructor
 const generateTeam = team => {
 
     // create the manager html

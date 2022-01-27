@@ -9,11 +9,7 @@ const promptQuestions = () => {
     ]);
 };
 
-const generateHTML = ({
 
-}) =>`
-
-`;
 
 function init() {
     promptQuestions()
