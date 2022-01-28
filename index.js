@@ -44,11 +44,73 @@ const managerQuestions = () => {
         teamMembers.push(manager);
 
         menuQuestions() 
-    }) 
-    menuQuestions()
+    })
+    
+const engineerQuestions = () => {
+    inquirer.prompt([
+        {
+            type: "input",
+            name: "name",
+            message: "What is the engineers name?",
+        },
+        {
+            type: "input",
+            name: "id",
+            message: "What is their I.D.?",
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "What is their email?",
+        },
+        {
+            type: "input",
+            name: "gitHub",
+            message: "what is their GitHub?",
+        }
+    ]).then((engineerAnswers) => {
+        console.log("engineerAnswers", engineerAnswers);
+        const engineer = new Engineer(engineerAnswers.name, engineerAnswers.id, engineerAnswers.email, engineerAnswers.gitHub);
+        teamMembers.push(engineer);
+    
+        menuQuestions()
+    })
+
+const internQuestions = () => {
+    inquirer.prompt([
+        {
+            type: "input",
+            name: "name",
+            message: "What is the interns name?",
+        },
+        {
+            type: "input",
+            name: "id",
+            message: "What is their I.D.?",
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "What is their email?",
+        },
+        {
+            type: "input",
+            name: "school",
+            message: "Where did they go to school?",
+        }
+    ]).then((internAnswers) => {
+        console.log("internAnswers", internAnswers);
+        const intern = new Intern(internAnswers.name, internAnswers.id, internAnswers.email, internAnswers.school);
+        teamMembers.push(intern);
+        
+        menuQuestions()
+    })
+    
 }
 
 managerQuestions();
+
+
 
 // function init() {
 //     promptQuestions()
