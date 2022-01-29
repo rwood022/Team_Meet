@@ -4,17 +4,15 @@ const Manager = require("./lib/manager");
 const inquirer = require("inquirer");
 const fs = require("fs");
 const { title } = require("process");
-const Manager = require("./lib/manager");
+
 
 const teamMembers = []
 
-const promptQuestions = () => {
-    return inquirer.prompt([
+// const promptQuestions = () => {
+//     return inquirer.prompt([
 
-    ]);
-};
-
-
+//     ]);
+// };
 
 const managerQuestions = () => {
     inquirer.prompt([
@@ -45,6 +43,7 @@ const managerQuestions = () => {
 
         menuQuestions() 
     })
+}
     
 const engineerQuestions = () => {
     inquirer.prompt([
@@ -75,6 +74,7 @@ const engineerQuestions = () => {
     
         menuQuestions()
     })
+}
 
 const internQuestions = () => {
     inquirer.prompt([
